@@ -288,7 +288,7 @@ export function ContactSection() {
               <Mail className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Email</h3>
-            <p className="text-gray-600 dark:text-gray-400">chanaka@example.com</p>
+            <p className="text-gray-600 dark:text-gray-400">chajeyraj@gmail.com</p>
           </GlassCard>
 
           <GlassCard className="p-6 text-center" hover>
@@ -296,7 +296,7 @@ export function ContactSection() {
               <Phone className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Phone</h3>
-            <p className="text-gray-600 dark:text-gray-400">+94 76 XXX XXXX</p>
+            <p className="text-gray-600 dark:text-gray-400">+94 76 876 6813</p>
           </GlassCard>
 
           <GlassCard className="p-6 text-center" hover>
@@ -304,7 +304,7 @@ export function ContactSection() {
               <MapPin className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Location</h3>
-            <p className="text-gray-600 dark:text-gray-400">Colombo, Sri Lanka</p>
+            <p className="text-gray-600 dark:text-gray-400">Btticaloa, Sri Lanka</p>
           </GlassCard>
         </motion.div>
       </div>

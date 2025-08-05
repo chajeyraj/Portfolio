@@ -60,14 +60,14 @@ export function Footer() {
                 >
                   <div className="flex items-center space-x-3 mb-4">
                     <div className="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center shadow-lg">
-                      <span className="text-white font-bold text-xl">CP</span>
+                      <span className="text-white font-bold text-xl">CR</span>
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                        Chanaka Prasanna
+                        Chajeyraj Kunaraj
                       </h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        AI/ML Engineer & Full Stack Developer
+                        UI/UX Designer & Full Stack Developer
                       </p>
                     </div>
                   </div>

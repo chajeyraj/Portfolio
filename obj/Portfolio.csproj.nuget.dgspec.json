@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/home/runner/workspace/Portfolio.csproj": {}
+    "C:\\Users\\abans\\OneDrive\\Desktop\\PortfolioVantage\\Portfolio.csproj": {}
   },
   "projects": {
-    "/home/runner/workspace/Portfolio.csproj": {
+    "C:\\Users\\abans\\OneDrive\\Desktop\\PortfolioVantage\\Portfolio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/runner/workspace/Portfolio.csproj",
+        "projectUniqueName": "C:\\Users\\abans\\OneDrive\\Desktop\\PortfolioVantage\\Portfolio.csproj",
         "projectName": "Portfolio",
-        "projectPath": "/home/runner/workspace/Portfolio.csproj",
-        "packagesPath": "/home/runner/.nuget/packages/",
-        "outputPath": "/home/runner/workspace/obj/",
+        "projectPath": "C:\\Users\\abans\\OneDrive\\Desktop\\PortfolioVantage\\Portfolio.csproj",
+        "packagesPath": "C:\\Users\\abans\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\abans\\OneDrive\\Desktop\\PortfolioVantage\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/runner/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\abans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -75,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/nix/store/wlknwwx8f79lq8n07b0xh7ddjrrk191h-dotnet-sdk-8.0.404/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
