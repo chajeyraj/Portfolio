@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { GlassCard } from "./ui/glass-card";
+import crImage from "../img/cr.jpg";
 
 export function HeroSection() {
   const handleScrollToSection = (sectionId: string) => {
@@ -22,8 +23,12 @@ export function HeroSection() {
           >
             <div className="relative">
               <div className="w-32 h-32 gradient-bg rounded-full p-1 animate-pulse-slow">
-                <div className="w-full h-full bg-gray-300 dark:bg-gray-700 rounded-full flex items-center justify-center">
-                  <span className="text-4xl font-bold text-gray-600 dark:text-gray-400">CR</span>
+                <div className="w-full h-full rounded-full overflow-hidden">
+                  <img 
+                    src="/src/img/cr.jpg" 
+                    alt="Chajey Raj" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
               <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-2 border-white dark:border-gray-900 animate-bounce-slow" />

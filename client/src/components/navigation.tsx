@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "@/hooks/use-theme";
+import { useLocation } from "wouter";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import nevImg from "../img/nev.png";
 
 export function Navigation() {
   const { theme, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [location, navigate] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,17 +21,35 @@ export function Navigation() {
   }, []);
 
   const navItems = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#projects", label: "Projects" },
-    { href: "#contact", label: "Contact" },
+    { href: "#home", label: "Home", type: "scroll" },
+    { href: "#about", label: "About", type: "scroll" },
+    { href: "#projects", label: "Projects", type: "scroll" },
+    { href: "/cv", label: "CV", type: "route" },
+    { href: "#contact", label: "Contact", type: "scroll" },
   ];
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = (href: string, type: string) => {
     setIsMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    
+    if (type === "route") {
+      navigate(href);
+    } else {
+      // If we're not on the home page, navigate to home first
+      if (location !== "/") {
+        navigate("/");
+        // Wait a bit for navigation to complete, then scroll
+        setTimeout(() => {
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }, 100);
+      } else {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
     }
   };
 
@@ -50,11 +71,11 @@ export function Navigation() {
               whileHover={{ scale: 1.05 }}
               className="flex items-center space-x-2"
             >
-              <div className="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-lg">CR</span>
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center shadow-lg overflow-hidden">
+                <img src={nevImg} alt="Logo" className="w-full h-full object-cover" />
               </div>
               <span className="text-xl font-bold text-gray-900 dark:text-white">
-                Chajey Raj
+                ChajeyRaj
               </span>
             </motion.div>
 
@@ -66,7 +87,7 @@ export function Navigation() {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  onClick={() => handleNavClick(item.href)}
+                  onClick={() => handleNavClick(item.href, item.type)}
                   className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 font-medium"
                 >
                   {item.label}
@@ -123,7 +144,7 @@ export function Navigation() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    onClick={() => handleNavClick(item.href)}
+                    onClick={() => handleNavClick(item.href, item.type)}
                     className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 font-medium py-2 text-left"
                   >
                     {item.label}
